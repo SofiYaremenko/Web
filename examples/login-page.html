@@ -60,7 +60,7 @@
       <div class="row">
         <div class="col-lg-4 col-md-6 ml-auto mr-auto">
           <div class="card card-login">
-            <form class="form" method="" action="">
+            <form class="form" method="post" action="../login_execute.php">
               <div class="card-header card-header-primary text-center">
                 <h4 class="card-title">Login</h4>
                
@@ -73,7 +73,7 @@
                       <i class="material-icons">mail</i>
                     </span>
                   </div>
-                  <input type="email" class="form-control" placeholder="Email...">
+                  <input name="email" type="email" class="form-control" placeholder="Email..." pattern=".{0}|.{1,30}" required title="Either 0 OR (1 to 30 chars)">
                 </div>
                 <div class="input-group">
                   <div class="input-group-prepend">
@@ -81,13 +81,13 @@
                       <i class="material-icons">lock_outline</i>
                     </span>
                   </div>
-                  <input type="password" class="form-control" placeholder="Password...">
+                  <input name="password" type="password" class="form-control" placeholder="Password..." pattern=".{0}|.{1,30}" required title="Either 0 OR (1 to 30 chars)">
                 </div>
 
               </div>
               <br><br>
               <div class="footer text-center">
-                <a href="#pablo" class="btn btn-primary btn-link btn-wd btn-lg">Lets Go</a>
+                <button type="submit" class="btn btn-primary btn-link btn-wd btn-lg">Lets Go</a>
               </div>
             </form>
             <p class="description text-center" id="sign-up" ><a href="register-page.html">Don't have an account? Register now!</a></p>

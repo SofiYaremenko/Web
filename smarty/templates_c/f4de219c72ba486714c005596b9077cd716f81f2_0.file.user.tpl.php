@@ -1,11 +1,36 @@
-<!doctype html>
+<?php
+/* Smarty version 3.1.33, created on 2019-04-25 23:19:44
+  from 'C:\wamp64\www\Web\smarty\templates\user.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.33',
+  'unifunc' => 'content_5cc24090e3c326_51098134',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'f4de219c72ba486714c005596b9077cd716f81f2' => 
+    array (
+      0 => 'C:\\wamp64\\www\\Web\\smarty\\templates\\user.tpl',
+      1 => 1556234377,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_5cc24090e3c326_51098134 (Smarty_Internal_Template $_smarty_tpl) {
+?><!doctype html>
 <html>
 <head>
-    <meta lang="{$lang}" />
+    <meta lang="<?php echo $_smarty_tpl->tpl_vars['lang']->value;?>
+" />
     <meta charset="utf-8" />
   <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title> {$title} </title>
+    <title> <?php echo $_smarty_tpl->tpl_vars['title']->value;?>
+ </title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
   <!--     Fonts and icons     -->
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
@@ -71,20 +96,24 @@
             <div class="profile">
               <div class="avatar">
 
-              {$avatar}
+              <?php echo $_smarty_tpl->tpl_vars['avatar']->value;?>
+
                 <!-- <img src="../assets/img/basic-bear-avatar.png" alt="Circle Image" class="img-raised rounded-circle img-fluid"> -->
               </div>
               <div class="name">
-                {$name}
+                <?php echo $_smarty_tpl->tpl_vars['name']->value;?>
+
                 <!--<h3 class="title">Christian Louboutin</h3> -->
-                {$email}
+                <?php echo $_smarty_tpl->tpl_vars['email']->value;?>
+
                 <!--<p>christian.louboutin@gmail.com</p> -->
               </div>
             </div>
           </div>
         </div>
         <div class="description text-center">
-          {$desc}
+          <?php echo $_smarty_tpl->tpl_vars['desc']->value;?>
+
           <!--<p>An artist of considerable range, Chet Faker &#x2014; the name taken by Melbourne-raised, Brooklyn-based Nick Murphy &#x2014; writes, performs and records all of his own music, giving it a warm, intimate feel with a solid groove structure. </p> -->
           <br>
           <div class="row">
@@ -104,25 +133,44 @@
       </nav>
       <div class="copyright float-right">
         &copy;
-        <script>
+        <?php echo '<script'; ?>
+>
           document.write(new Date().getFullYear())
-        </script>, made with <i class="material-icons">favorite</i> 
+        <?php echo '</script'; ?>
+>, made with <i class="material-icons">favorite</i> 
       </div>
     </div>
   </footer>
 
     <!--   Core JS Files   -->
-  <script src="../assets/js/core/jquery.min.js" type="text/javascript"></script>
-  <script src="../assets/js/core/popper.min.js" type="text/javascript"></script>
-  <script src="../assets/js/core/bootstrap-material-design.min.js" type="text/javascript"></script>
-  <script src="../assets/js/plugins/moment.min.js"></script>
+  <?php echo '<script'; ?>
+ src="../assets/js/core/jquery.min.js" type="text/javascript"><?php echo '</script'; ?>
+>
+  <?php echo '<script'; ?>
+ src="../assets/js/core/popper.min.js" type="text/javascript"><?php echo '</script'; ?>
+>
+  <?php echo '<script'; ?>
+ src="../assets/js/core/bootstrap-material-design.min.js" type="text/javascript"><?php echo '</script'; ?>
+>
+  <?php echo '<script'; ?>
+ src="../assets/js/plugins/moment.min.js"><?php echo '</script'; ?>
+>
   <!--  Plugin for the Datepicker, full documentation here: https://github.com/Eonasdan/bootstrap-datetimepicker -->
-  <script src="../assets/js/plugins/bootstrap-datetimepicker.js" type="text/javascript"></script>
+  <?php echo '<script'; ?>
+ src="../assets/js/plugins/bootstrap-datetimepicker.js" type="text/javascript"><?php echo '</script'; ?>
+>
   <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
-  <script src="../assets/js/plugins/nouislider.min.js" type="text/javascript"></script>
+  <?php echo '<script'; ?>
+ src="../assets/js/plugins/nouislider.min.js" type="text/javascript"><?php echo '</script'; ?>
+>
   <!--  Google Maps Plugin    -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+  <?php echo '<script'; ?>
+ src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"><?php echo '</script'; ?>
+>
   <!-- Control Center for Material Kit: parallax effects, scripts for the example pages etc -->
-  <script src="../assets/js/material-kit.js?v=2.0.5" type="text/javascript"></script>
+  <?php echo '<script'; ?>
+ src="../assets/js/material-kit.js?v=2.0.5" type="text/javascript"><?php echo '</script'; ?>
+>
 </body>
-</html>
+</html><?php }
+}

@@ -27,7 +27,7 @@ public function setAboutUser($aboutUser) { $this->aboutUser = $aboutUser; }
 public function getPassword() { return $this->password; }
 public function setPassword($password) { $this->password = $password; } 
 
-function __construct($id, $title, $description, $img, $category, $lang, $hoursAmount) {
+function __construct($email, $firstName, $lastName, $img, $aboutUser, $password) {
 $this->email=$email;
 $this->firstName=$firstName;
 $this->lastName=$lastName;

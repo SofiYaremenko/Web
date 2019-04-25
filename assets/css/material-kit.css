@@ -18071,4 +18071,21 @@ footer .pull-center {
 .product-page .flexi-nav>li a{transition:all .15s ease 0s}
 
 .row.mycourse{position:absolute;bottom:0;}
+
+#all-courses-filter{
+  width: 700px;
+  min-width: 200px;
+}
+
+#all-courses-filter .filter-panel .panel-default{
+
+  position: center;
+  padding: 10px;
+}
+#all-courses-filter .filter-panel .panel .panel-body{
+  padding:0 10px;
+}
+#all-courses-filter .filter-panel .panel .panel-body .form-inline .form-group #pref-search{
+  padding-top: 2px;
+}
 /*# sourceMappingURL=kit-free.css.map */

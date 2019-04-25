@@ -72,6 +72,37 @@
       <div class="section text-center">
         <h2 class="title">Available courses</h2>
       </div>
+      <div class="container-fluid" id="all-courses-filter">
+            <div id="filter-panel" class=" filter-panel">
+                <div class="  panel panel-default ">
+                    <div class="panel-body">
+                        <form class="form-inline" role="form">
+                            <div class="form-group filter">
+                                <label class="filter-col" for="pref-filterby" style="margin-right:30px; font-size:14px">Filter by:</label>
+                                <select id="pref-filterby"  style="margin-right:50px; font-size:14px" class="form-control" >
+                                    <option>All</option>
+                                    <option>Web Development</option>
+                                    <option>Game Development</option>
+                                </select>
+                            </div> <!-- form group [order by] -->
+
+                            <div class="form-group filter">
+                                <label class="filter-col" style="margin-right:30px; font-size: 14px" for="pref-by-languages"  >Language:</label>
+                                <select id="pref-by-languages" style="margin-right:50px; font-size: 14px" class="form-control">
+                                    <option>All   </option>
+                                    <option>English   </option>
+                                    <option>Russian   </option>
+                                </select>
+                            </div> <!-- form group [order by] -->
+                            <div class=" filter ">
+                                <!--<label class="filter-col" style="margin-right:30px;" for="pref-search">Search:</label>-->
+                                <input type="text" class="form-control" id="pref-search" placeholder="Search.." style="padding-top: 2px;">
+                            </div><!-- form group [search] -->
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
       <div class="row">
         <div class="col-md-6">
       <div class="card">

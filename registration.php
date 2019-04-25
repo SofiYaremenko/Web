@@ -10,7 +10,7 @@ $lastName;
 $email;
 $password;
 
-$img = "";
+$img = "../assets/img/basic-bear-avatar.png";
 
 if (isset($_POST['firstName'])) 
 	$firstName = htmlentities($_POST['firstName']);

@@ -3,6 +3,7 @@
 //function reg(){
 	
 include ("config.php");
+include ("user.php");
 
 $firstName;
 $lastName;
@@ -12,7 +13,7 @@ $password;
 $img = "";
 
 if (isset($_POST['firstName'])) 
-	$firstName = htmlentities($_GET['firstName']);
+	$firstName = htmlentities($_POST['firstName']);
 if (isset($_POST['lastName'])) 
 	$lastName = htmlentities($_POST['lastName']);
 if (isset($_POST['email'])) 
@@ -28,15 +29,15 @@ if ($result == 'FALSE'){
 	unset($email);
 	exit ("Користувач з поштою '$email' вже існує в базі даних. Реєстрація не можлива.");
 }else{
-	$query = "INSERT INTO users (email,password,name,surname,img_profile,about) 
-	VALUES ("'$email'","'$password'","'$firstName'","'$lastName'","'$img'","")";
+	$query = "INSERT INTO users (email,password,name,surname,img_profile,about) VALUES ('$email','$password','$firstName','$lastName','$img','')";
 	$result = mysqli_query($db, $query);
-	if($result == 'TRUE'){
-		header("location: ../user-profile.html");		
+	if($result ){
+		header("location: ./examples/profile-page.html");		
 	}else{
-		//header("location: ../user-profile.html");		
-		header("location: ../register-page.html");
-	}
+			
+		header("location: ./examples/register-page.html");
+	}	
+	
 }
 
 //}

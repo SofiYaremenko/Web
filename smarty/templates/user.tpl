@@ -1,3 +1,19 @@
+<!doctype html>
+<html>
+<head>
+    <meta lang="{$lang}" />
+    <title> {$title} </title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    {$header}
+    {$content}
+</body>
+</html>
+
+
+
+
 {foreach from=$myArray item=user}
 <div class="profile-content">
       <div class="container">

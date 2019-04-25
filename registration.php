@@ -1,6 +1,4 @@
 <?php
-
-//function reg(){
 	
 include ("config.php");
 include ("user.php");
@@ -21,7 +19,7 @@ if (isset($_POST['email']))
 if (isset($_POST['password'])) 
 	$password = htmlentities($_POST['password']);
 
-$user = new User($email, $firstName, $lastName, $img, "", $password);
+$user = new User($email, $password, $firstName, $lastName, $img, "");
 
 $query = "SELECT email FROM users WHERE email='$email'";
 $result = mysqli_query($db, $query);
@@ -40,5 +38,4 @@ if ($result == 'FALSE'){
 	
 }
 
-//}
 ?>

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-04-26 12:16:29
+/* Smarty version 3.1.33, created on 2019-04-26 12:38:02
   from 'C:\wamp64\www\Web\smarty\templates\mycourses-page.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5cc2f69d395a40_69946842',
+  'unifunc' => 'content_5cc2fbaa01e144_54601587',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6e117e942a6494a71477e2ec6ae8f4d48543dcb6' => 
     array (
       0 => 'C:\\wamp64\\www\\Web\\smarty\\templates\\mycourses-page.tpl',
-      1 => 1556280878,
+      1 => 1556282279,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5cc2f69d395a40_69946842 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5cc2fbaa01e144_54601587 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -87,7 +87,7 @@ $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->t
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['course']->value) {
 ?>
-    <form method="post" action="coursedetails.php">
+    <!--<form method="post" action="coursedetails.php">-->
         <div class="card">
           
           <div class="card-header card-header-text card-header-primary">
@@ -111,8 +111,17 @@ foreach ($_from as $_smarty_tpl->tpl_vars['course']->value) {
             </div>
            
             <div class="row mycourse " >
-                 <button type="submit" class="btn btn-primary">Course Details</a>
-                <a href="forum.php" class="btn btn-primary">Forum</a>
+              <form method="post" action="coursedetails.php">
+                 <input name="id" type="hidden" value="<?php echo $_smarty_tpl->tpl_vars['course']->value->getId();?>
+">
+                 <button type="submit" class="btn btn-primary">Course Details</button>
+                 </form>
+               <!--<a href="forum.php" class="btn btn-primary">Forum</a>-->
+               <form method="post" action="forum.php">
+                   <input name="id" type="hidden" value="<?php echo $_smarty_tpl->tpl_vars['course']->value->getId();?>
+">
+                      <button type="submit" class="btn btn-primary">Forum</button>
+                  </form>
             </div>
           </div>
 
@@ -121,7 +130,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['course']->value) {
           </div>
 
         </div>
-        </form>
+        <!--</form>-->
 		<?php
 }
 }

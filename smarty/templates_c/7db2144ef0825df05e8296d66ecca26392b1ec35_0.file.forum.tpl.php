@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-04-26 12:15:47
+/* Smarty version 3.1.33, created on 2019-04-26 12:55:01
   from 'C:\wamp64\www\Web\smarty\templates\forum.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5cc2f67396dd27_72224569',
+  'unifunc' => 'content_5cc2ffa5cda2f8_15510006',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '7db2144ef0825df05e8296d66ecca26392b1ec35' => 
     array (
       0 => 'C:\\wamp64\\www\\Web\\smarty\\templates\\forum.tpl',
-      1 => 1556280945,
+      1 => 1556283011,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5cc2f67396dd27_72224569 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5cc2ffa5cda2f8_15510006 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!doctype html>
 <html lang="en">
 
@@ -122,6 +122,8 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
             <form name="form1" method="post" action="add_comment.php">
                 <td>
                     <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#FFFFFF">
+                        <input name="id" type="hidden" value="<?php echo $_smarty_tpl->tpl_vars['course']->value->getId();?>
+">   
                         <tr>
                             <td valign="top"><strong>New Comment</strong></td>
                             <td valign="top">:</td>

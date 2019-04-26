@@ -90,6 +90,7 @@
             <form name="form1" method="post" action="add_comment.php">
                 <td>
                     <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#FFFFFF">
+                        <input name="id" type="hidden" value="{$course->getId()}">   
                         <tr>
                             <td valign="top"><strong>New Comment</strong></td>
                             <td valign="top">:</td>

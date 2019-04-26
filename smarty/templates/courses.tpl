@@ -66,7 +66,7 @@
                                     <option value="programming languages" >Programming Languages</option>
                                     <option value="game development" >Game Development</option>
                                     <option value="mobile apps" >Mobile Apps</option>
-                                    {*<option value="software engineering" selected="selected">Software Engineering</option>*}
+                                    
                                     <option value="software engineering" >Software Engineering</option>
                                 </select>
                                 <input  class="btn" type="submit" name="submit" value="filter">
@@ -80,20 +80,25 @@
         </div>
       <div class="row">
         {foreach from=$myArray item=course}
+
 <div class="col-md-6">
+
+            <form method="post" action="coursedetails.php">
       <div class="card">
           <img class="card-img-top" src="{$course->getImg()}" alt="Card image cap">
           <div class="card-header card-header-text card-header-primary">
             <div class="card-text">
               <h4 class="card-title">{$course->getTitle()}</h4>
+               <input name="id" type="hidden" value="{$course->getId()}">
             </div>
           </div>
           <div class="card-body">
               <p class="card-text">{$course->getDescription()}</p>
-    <a href="#" class="btn btn-primary btn-round">Go to course</a>
+    <button type="submit" class="btn btn-primary">Course Details</button>
           </div>
       </div>
 </div>
+</form>
 {/foreach}
     </div>
   </div>

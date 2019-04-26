@@ -59,7 +59,7 @@
         <div class="row">
         
 		{foreach from=$myArray item=course}
-    <form method="post" action="coursedetails.php">
+    <!--<form method="post" action="coursedetails.php">-->
         <div class="card">
           
           <div class="card-header card-header-text card-header-primary">
@@ -79,8 +79,15 @@
             </div>
            
             <div class="row mycourse " >
-                 <button type="submit" class="btn btn-primary">Course Details</a>
-                <a href="forum.php" class="btn btn-primary">Forum</a>
+              <form method="post" action="coursedetails.php">
+                 <input name="id" type="hidden" value="{$course->getId()}">
+                 <button type="submit" class="btn btn-primary">Course Details</button>
+                 </form>
+               <!--<a href="forum.php" class="btn btn-primary">Forum</a>-->
+               <form method="post" action="forum.php">
+                   <input name="id" type="hidden" value="{$course->getId()}">
+                      <button type="submit" class="btn btn-primary">Forum</button>
+                  </form>
             </div>
           </div>
 
@@ -89,7 +96,7 @@
           </div>
 
         </div>
-        </form>
+        <!--</form>-->
 		{/foreach}
         
         </div>

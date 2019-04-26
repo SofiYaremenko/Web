@@ -2,7 +2,7 @@
   require_once('../smarty/Smarty.class.php');
   require_once('courseDAO.php');
 //   session_start();
-if(isset($_POST['submit'])) {
+
 
 
   $smarty = new Smarty();
@@ -27,7 +27,7 @@ if(isset($_POST['submit'])) {
             </a>
             <div class="dropdown-menu dropdown-menu-right">
               <a href="profile-page.php" class="dropdown-item">Me</a>
-              <a href="mycourses-page.html" class="dropdown-item">My Courses</a>
+              <a href="mycourses.php" class="dropdown-item">My Courses</a>
               <a href="logout.php" class="dropdown-item">Sign out</a>
             </div>
           </li>';
@@ -38,7 +38,7 @@ if(isset($_POST['submit'])) {
     }
 
 
-
+if(isset($_POST['submit'])) {
     if($_POST['select']=='databases') {
         $sql = "SELECT * FROM courses WHERE fk_category = 1";
         $smarty->assign("databases","selected");
@@ -70,6 +70,12 @@ if(isset($_POST['submit'])) {
     courseDAO::eagerInit($sql);
     $courses = courseDAO::getCourses();
 
+}
+else
+{
+    $sql = "SELECT * FROM courses";
+    courseDAO::eagerInit($sql);
+    $courses = courseDAO::getCourses();
 }
 
 

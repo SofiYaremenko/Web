@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-04-26 11:45:17
+/* Smarty version 3.1.33, created on 2019-04-26 12:33:27
   from 'C:\wamp64\www\Web\smarty\templates\courses.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5cc2ef4d4a0744_77842139',
+  'unifunc' => 'content_5cc2fa977fdb48_54993639',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a5f708da3279efc31b3d7512a9c76b0719cf27ca' => 
     array (
       0 => 'C:\\wamp64\\www\\Web\\smarty\\templates\\courses.tpl',
-      1 => 1556278251,
+      1 => 1556282004,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5cc2ef4d4a0744_77842139 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5cc2fa977fdb48_54993639 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!doctype html>
 <html lang="en">
 
@@ -90,7 +90,8 @@ function content_5cc2ef4d4a0744_77842139 (Smarty_Internal_Template $_smarty_tpl)
                                     <option value="programming languages" >Programming Languages</option>
                                     <option value="game development" >Game Development</option>
                                     <option value="mobile apps" >Mobile Apps</option>
-                                                                        <option value="software engineering" >Software Engineering</option>
+                                    
+                                    <option value="software engineering" >Software Engineering</option>
                                 </select>
                                 <input  class="btn" type="submit" name="submit" value="filter">
                             </div> <!-- form group [order by] -->
@@ -107,7 +108,10 @@ $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->t
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['course']->value) {
 ?>
+
 <div class="col-md-6">
+
+            <form method="post" action="coursedetails.php">
       <div class="card">
           <img class="card-img-top" src="<?php echo $_smarty_tpl->tpl_vars['course']->value->getImg();?>
 " alt="Card image cap">
@@ -115,15 +119,18 @@ foreach ($_from as $_smarty_tpl->tpl_vars['course']->value) {
             <div class="card-text">
               <h4 class="card-title"><?php echo $_smarty_tpl->tpl_vars['course']->value->getTitle();?>
 </h4>
+               <input name="id" type="hidden" value="<?php echo $_smarty_tpl->tpl_vars['course']->value->getId();?>
+">
             </div>
           </div>
           <div class="card-body">
               <p class="card-text"><?php echo $_smarty_tpl->tpl_vars['course']->value->getDescription();?>
 </p>
-    <a href="#" class="btn btn-primary btn-round">Go to course</a>
+    <button type="submit" class="btn btn-primary">Course Details</button>
           </div>
       </div>
 </div>
+</form>
 <?php
 }
 }

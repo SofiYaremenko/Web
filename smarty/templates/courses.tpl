@@ -14,7 +14,7 @@
   <link href="../assets/css/material-kit.css?v=2.0.5" rel="stylesheet" />
 </head>
 
-<body>
+<body class="profile-page">
   <nav class="navbar navbar-color-on-scroll navbar-transparent fixed-top navbar-expand-lg" color-on-scroll="100">
     <div class="container">
       <div class="navbar-translate">
@@ -44,17 +44,8 @@
     </div>
   </nav>
   <div class="page-header header-filter" data-parallax="true" style="background-image: url('../assets/img/profile_city.jpg')">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8 ml-auto mr-auto">
-          <div class="brand text-center">
-            <h1>Your title here</h1>
-            <h3 class="title text-center">Subtitle</h3>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
+
   <div class="main main-raised">
     <div class="container">
       <div class="section text-center">

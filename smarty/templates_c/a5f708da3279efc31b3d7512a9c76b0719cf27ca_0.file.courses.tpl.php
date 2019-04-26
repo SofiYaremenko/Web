@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-04-26 08:14:21
+/* Smarty version 3.1.33, created on 2019-04-26 08:38:27
   from 'C:\wamp64\www\Web\smarty\templates\courses.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5cc2bddd156524_98540287',
+  'unifunc' => 'content_5cc2c383ccc9f1_28635322',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a5f708da3279efc31b3d7512a9c76b0719cf27ca' => 
     array (
       0 => 'C:\\wamp64\\www\\Web\\smarty\\templates\\courses.tpl',
-      1 => 1556265894,
+      1 => 1556267904,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5cc2bddd156524_98540287 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5cc2c383ccc9f1_28635322 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!doctype html>
 <html lang="en">
 
@@ -37,7 +37,7 @@ function content_5cc2bddd156524_98540287 (Smarty_Internal_Template $_smarty_tpl)
   <link href="../assets/css/material-kit.css?v=2.0.5" rel="stylesheet" />
 </head>
 
-<body>
+<body class="profile-page">
   <nav class="navbar navbar-color-on-scroll navbar-transparent fixed-top navbar-expand-lg" color-on-scroll="100">
     <div class="container">
       <div class="navbar-translate">
@@ -68,17 +68,8 @@ function content_5cc2bddd156524_98540287 (Smarty_Internal_Template $_smarty_tpl)
     </div>
   </nav>
   <div class="page-header header-filter" data-parallax="true" style="background-image: url('../assets/img/profile_city.jpg')">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8 ml-auto mr-auto">
-          <div class="brand text-center">
-            <h1>Your title here</h1>
-            <h3 class="title text-center">Subtitle</h3>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
+
   <div class="main main-raised">
     <div class="container">
       <div class="section text-center">

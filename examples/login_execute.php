@@ -36,7 +36,7 @@ if (!$result || !isset($user)){
 		session_start();
 		$_SESSION["loggedin"] = true;
 		$_SESSION["email"] = $email;
-		$_SESSION["img"] = $img;
+		$_SESSION['img'] = $img;
 		header("location: profile-page.php");		
 	}else{
 		header("location: login-page.html");	

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-04-26 08:38:27
+/* Smarty version 3.1.33, created on 2019-04-26 11:45:17
   from 'C:\wamp64\www\Web\smarty\templates\courses.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5cc2c383ccc9f1_28635322',
+  'unifunc' => 'content_5cc2ef4d4a0744_77842139',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a5f708da3279efc31b3d7512a9c76b0719cf27ca' => 
     array (
       0 => 'C:\\wamp64\\www\\Web\\smarty\\templates\\courses.tpl',
-      1 => 1556267904,
+      1 => 1556278251,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5cc2c383ccc9f1_28635322 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5cc2ef4d4a0744_77842139 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!doctype html>
 <html lang="en">
 
@@ -79,28 +79,23 @@ function content_5cc2c383ccc9f1_28635322 (Smarty_Internal_Template $_smarty_tpl)
             <div id="filter-panel" class=" filter-panel">
                 <div class="  panel panel-default ">
                     <div class="panel-body">
-                        <form class="form-inline" role="form">
+                        <form class="form-inline" role="form" method="post" action="courses.php">
                             <div class="form-group filter">
                                 <label class="filter-col" for="pref-filterby" style="margin-right:30px; font-size:14px">Filter by:</label>
-                                <select id="pref-filterby"  style="margin-right:50px; font-size:14px" class="form-control" >
-                                    <option>All</option>
-                                    <option>Web Development</option>
-                                    <option>Game Development</option>
+                                <select name="select"  id="pref-filterby"  style="margin-right:50px; font-size:14px" class="form-control" >
+                                    <option value="all" >All</option>
+
+                                    <option value="databases" >Databases</option>>
+                                    <option value="web development" >Web Development</option>
+                                    <option value="programming languages" >Programming Languages</option>
+                                    <option value="game development" >Game Development</option>
+                                    <option value="mobile apps" >Mobile Apps</option>
+                                                                        <option value="software engineering" >Software Engineering</option>
                                 </select>
+                                <input  class="btn" type="submit" name="submit" value="filter">
                             </div> <!-- form group [order by] -->
 
-                            <div class="form-group filter">
-                                <label class="filter-col" style="margin-right:30px; font-size: 14px" for="pref-by-languages"  >Language:</label>
-                                <select id="pref-by-languages" style="margin-right:50px; font-size: 14px" class="form-control">
-                                    <option>All   </option>
-                                    <option>English   </option>
-                                    <option>Russian   </option>
-                                </select>
-                            </div> <!-- form group [order by] -->
-                            <div class=" filter ">
-                                <!--<label class="filter-col" style="margin-right:30px;" for="pref-search">Search:</label>-->
-                                <input type="text" class="form-control" id="pref-search" placeholder="Search.." style="padding-top: 2px;">
-                            </div><!-- form group [search] -->
+                          
                         </form>
                     </div>
                 </div>

@@ -33,10 +33,10 @@ if (!$result){
 		session_start();
 		$_SESSION["loggedin"] = true;
 		$_SESSION["email"] = $email;
-		header("location: ./examples/profile-page.php");		
+		header("location: profile-page.php");		
 	}else{
 			
-		header("location: ./examples/register-page.html");
+		header("location: register-page.html");
 	}	
 	
 }

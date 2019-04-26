@@ -1,7 +1,7 @@
 <?php
 session_start();
-require_once('../DBHelper.php');
-require_once('../user.php');
+require_once('DBHelper.php');
+require_once('user.php');
 
 class profileDAO
 {

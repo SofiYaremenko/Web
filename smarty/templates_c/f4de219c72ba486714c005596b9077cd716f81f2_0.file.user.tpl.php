@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-04-26 07:37:09
+/* Smarty version 3.1.33, created on 2019-04-26 08:23:19
   from 'C:\wamp64\www\Web\smarty\templates\user.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5cc2b5254da2b8_54263451',
+  'unifunc' => 'content_5cc2bff71f1ed7_91753676',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f4de219c72ba486714c005596b9077cd716f81f2' => 
     array (
       0 => 'C:\\wamp64\\www\\Web\\smarty\\templates\\user.tpl',
-      1 => 1556264189,
+      1 => 1556266993,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5cc2b5254da2b8_54263451 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5cc2bff71f1ed7_91753676 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!doctype html>
 <html>
 <head>
@@ -54,12 +54,12 @@ function content_5cc2b5254da2b8_54263451 (Smarty_Internal_Template $_smarty_tpl)
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="../courses.php">
+            <a class="nav-link" href="courses.php">
                <i class="material-icons">apps</i>Courses
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../about.html">
+            <a class="nav-link" href="about.html">
                About Us
             </a>
           </li>
@@ -73,7 +73,7 @@ function content_5cc2b5254da2b8_54263451 (Smarty_Internal_Template $_smarty_tpl)
             <div class="dropdown-menu dropdown-menu-right">
               <a href="profile-page.php" class="dropdown-item">Me</a>
               <a href="mycourses-page.html" class="dropdown-item">My Courses</a>
-              <a href="../logout.php" class="dropdown-item">Sign out</a>
+              <a href="logout.php" class="dropdown-item">Sign out</a>
             </div>
           </li>
         </ul>

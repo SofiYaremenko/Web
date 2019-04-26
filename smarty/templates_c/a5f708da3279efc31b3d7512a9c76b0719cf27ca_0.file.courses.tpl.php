@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-04-26 07:08:21
+/* Smarty version 3.1.33, created on 2019-04-26 08:14:21
   from 'C:\wamp64\www\Web\smarty\templates\courses.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5cc2ae6524f8a9_84347713',
+  'unifunc' => 'content_5cc2bddd156524_98540287',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a5f708da3279efc31b3d7512a9c76b0719cf27ca' => 
     array (
       0 => 'C:\\wamp64\\www\\Web\\smarty\\templates\\courses.tpl',
-      1 => 1556262294,
+      1 => 1556265894,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5cc2ae6524f8a9_84347713 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5cc2bddd156524_98540287 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!doctype html>
 <html lang="en">
 
@@ -34,7 +34,7 @@ function content_5cc2ae6524f8a9_84347713 (Smarty_Internal_Template $_smarty_tpl)
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
   <!-- Material Kit CSS -->
-  <link href="assets/css/material-kit.css?v=2.0.5" rel="stylesheet" />
+  <link href="../assets/css/material-kit.css?v=2.0.5" rel="stylesheet" />
 </head>
 
 <body>
@@ -61,16 +61,13 @@ function content_5cc2ae6524f8a9_84347713 (Smarty_Internal_Template $_smarty_tpl)
                About Us
             </a>
           </li>
-          <li class="nav-item">
-            <a href="examples/login-page.html" class="nav-link">
-              Log in
-            </a>
-          </li>
+          <?php echo $_smarty_tpl->tpl_vars['header']->value;?>
+
         </ul>
       </div>
     </div>
   </nav>
-  <div class="page-header header-filter" data-parallax="true" style="background-image: url('assets/img/profile_city.jpg')">
+  <div class="page-header header-filter" data-parallax="true" style="background-image: url('../assets/img/profile_city.jpg')">
     <div class="container">
       <div class="row">
         <div class="col-md-8 ml-auto mr-auto">
@@ -164,24 +161,24 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
    <!--   Core JS Files   -->
   <?php echo '<script'; ?>
- src="./assets/js/core/jquery.min.js" type="text/javascript"><?php echo '</script'; ?>
+ src="../assets/js/core/jquery.min.js" type="text/javascript"><?php echo '</script'; ?>
 >
   <?php echo '<script'; ?>
- src="./assets/js/core/popper.min.js" type="text/javascript"><?php echo '</script'; ?>
+ src="../assets/js/core/popper.min.js" type="text/javascript"><?php echo '</script'; ?>
 >
   <?php echo '<script'; ?>
- src="./assets/js/core/bootstrap-material-design.min.js" type="text/javascript"><?php echo '</script'; ?>
+ src="../assets/js/core/bootstrap-material-design.min.js" type="text/javascript"><?php echo '</script'; ?>
 >
   <?php echo '<script'; ?>
- src="./assets/js/plugins/moment.min.js"><?php echo '</script'; ?>
+ src="../assets/js/plugins/moment.min.js"><?php echo '</script'; ?>
 >
   <!--  Plugin for the Datepicker, full documentation here: https://github.com/Eonasdan/bootstrap-datetimepicker -->
   <?php echo '<script'; ?>
- src="./assets/js/plugins/bootstrap-datetimepicker.js" type="text/javascript"><?php echo '</script'; ?>
+ src="../assets/js/plugins/bootstrap-datetimepicker.js" type="text/javascript"><?php echo '</script'; ?>
 >
   <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
   <?php echo '<script'; ?>
- src="./assets/js/plugins/nouislider.min.js" type="text/javascript"><?php echo '</script'; ?>
+ src="../assets/js/plugins/nouislider.min.js" type="text/javascript"><?php echo '</script'; ?>
 >
   <!--  Google Maps Plugin    -->
   <?php echo '<script'; ?>
@@ -189,7 +186,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 >
   <!-- Control Center for Material Kit: parallax effects, scripts for the example pages etc -->
   <?php echo '<script'; ?>
- src="./assets/js/material-kit.js?v=2.0.5" type="text/javascript"><?php echo '</script'; ?>
+ src="../assets/js/material-kit.js?v=2.0.5" type="text/javascript"><?php echo '</script'; ?>
 >
 </body>
 

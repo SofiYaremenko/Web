@@ -29,12 +29,12 @@
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="../courses.php">
+            <a class="nav-link" href="courses.php">
                <i class="material-icons">apps</i>Courses
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../about.html">
+            <a class="nav-link" href="about.html">
                About Us
             </a>
           </li>
@@ -47,7 +47,7 @@
             <div class="dropdown-menu dropdown-menu-right">
               <a href="profile-page.php" class="dropdown-item">Me</a>
               <a href="mycourses-page.html" class="dropdown-item">My Courses</a>
-              <a href="../logout.php" class="dropdown-item">Sign out</a>
+              <a href="logout.php" class="dropdown-item">Sign out</a>
             </div>
           </li>
         </ul>

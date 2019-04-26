@@ -5,6 +5,7 @@ include ("user.php");
 
 $email;
 $password;
+$img;
 
 if (isset($_POST['email'])) 
 	$email = htmlentities($_POST['email']);
@@ -19,6 +20,7 @@ if(mysqli_num_rows($result) == 0){
       }
       while ($row = mysqli_fetch_array($result)){
           $pass = $row['password'];
+          $img = $row['img_profile'];
         
          
       }
@@ -34,9 +36,10 @@ if (!$result || !isset($user)){
 		session_start();
 		$_SESSION["loggedin"] = true;
 		$_SESSION["email"] = $email;
-		header("location: ./examples/profile-page.php");		
+		$_SESSION["img"] = $img;
+		header("location: profile-page.php");		
 	}else{
-		header("location: ./examples/login-page.html");	
+		header("location: login-page.html");	
 	}
 	
 //}

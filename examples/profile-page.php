@@ -13,7 +13,7 @@
     $user = profileDAO::getlogUser();
     $desc = "";
     $avatar = "";
-    $name = "";
+    $name = "Sofi";
     $email = "";
     $ses_email = $_SESSION['email'];
 
@@ -23,7 +23,7 @@
         //<p>christian.louboutin@gmail.com</p>
         $email .="<p>". $user->getEmail()."</p>";
         //<h3 class="title">Christian Louboutin</h3> 
-        $name .='<h3 class="title">'. $user->getFirstName() . ' ' .  $user->getLastName(). '</h3>';
+        $name .='<h3 class="title">'.$user->getFirstName(). '</h3>';
         //echo $name;
         //<img src="../assets/img/basic-bear-avatar.png" alt="Circle Image" class="img-raised rounded-circle img-fluid"> 
         $avatar .= '<img src=' . $user->getImg(). 'alt="Circle Image" class="img-raised rounded-circle img-fluid">';

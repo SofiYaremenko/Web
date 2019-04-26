@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-04-25 23:19:44
+/* Smarty version 3.1.33, created on 2019-04-26 00:01:18
   from 'C:\wamp64\www\Web\smarty\templates\user.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5cc24090e3c326_51098134',
+  'unifunc' => 'content_5cc24a4e288340_79214573',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f4de219c72ba486714c005596b9077cd716f81f2' => 
     array (
       0 => 'C:\\wamp64\\www\\Web\\smarty\\templates\\user.tpl',
-      1 => 1556234377,
+      1 => 1556236869,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5cc24090e3c326_51098134 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5cc24a4e288340_79214573 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!doctype html>
 <html>
 <head>
@@ -78,7 +78,7 @@ function content_5cc24090e3c326_51098134 (Smarty_Internal_Template $_smarty_tpl)
               </div>
             </a>
             <div class="dropdown-menu dropdown-menu-right">
-              <a href="profile-page.html" class="dropdown-item">Me</a>
+              <a href="profile-page.php" class="dropdown-item">Me</a>
               <a href="mycourses-page.html" class="dropdown-item">My Courses</a>
               <a href="../logout.php" class="dropdown-item">Sign out</a>
             </div>

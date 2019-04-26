@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Courses 4 You</title>
+  <title>Courses</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
@@ -12,11 +12,10 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
   <!-- Material Kit CSS -->
   <link href="assets/css/material-kit.css?v=2.0.5" rel="stylesheet" />
-   <link href="./assets/demo/demo.css" rel="stylesheet" />
 </head>
 
-<body class="index-page sidebar-collapse">
-  <nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100">
+<body>
+  <nav class="navbar navbar-color-on-scroll navbar-transparent fixed-top navbar-expand-lg" color-on-scroll="100">
     <div class="container">
       <div class="navbar-translate">
         <a class="navbar-brand" href="template.html"> Courses 4 You </a>
@@ -53,8 +52,8 @@
       <div class="row">
         <div class="col-md-8 ml-auto mr-auto">
           <div class="brand text-center">
-            <h1>From courses to degrees</h1>
-            <h3 class="title text-center">100% online learning from the world’s best universities and companies</h3>
+            <h1>Your title here</h1>
+            <h3 class="title text-center">Subtitle</h3>
           </div>
         </div>
       </div>
@@ -63,61 +62,58 @@
   <div class="main main-raised">
     <div class="container">
       <div class="section text-center">
-        <h2 class="title">How It Works</h2>
-        <br><br><br>
-        <i class="material-icons">filter_1</i> <h3>Coursework</h3>
-          Connect with thousands of other learners and debate ideas, discuss course material, and get help mastering concepts
-          <br> <br><br>
-        <i class="material-icons">filter_2</i> <h3>Help & Support</h3>
-          Each course is like an interactive textbook, featuring pre-recorded videos, quizzes, and projects
-          <br><br><br>
-          <i class="material-icons">filter_3</i> <h3>Certificates</h3>
-          Earn official recognition for your work, and share your success with friends, colleagues, and employers.
-          <br><br><br>
-          <a href="courses.html" class="btn btn-primary btn-round">Go To Courses</a>
+        <h2 class="title">Available courses</h2>
       </div>
-      <!--<div class="container">
-      <div class="col-lg-6 col-md-12">
-              <div class="row">
-                <div class="col-md-3">
-                  <ul class="nav nav-pills nav-pills-icons flex-column" role="tablist">
-                    <li class="nav-item" >
-                      <a class="nav-link active" href="#coursework" role="tab" data-toggle="tab">
-                        <i class="material-icons">filter_1</i> Coursework
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#helpsupport" role="tab" data-toggle="tab">
-                        <i class="material-icons">filter_2</i> Help & Support
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#certificates" role="tab" data-toggle="tab">
-                        <i class="material-icons">filter_3</i> Certificates
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="col-md-8 ml-auto mr-auto text-center">
-                  <div class="tab-content">
-                    <div class="tab-pane active" id="helpsupport">
-                      Connect with thousands of other learners and debate ideas, discuss course material, and get help mastering concepts.
-                    </div>
-                    <div class="tab-pane" id="coursework">
-                      Each course is like an interactive textbook, featuring pre-recorded videos, quizzes, and projects.
-                    </div>
-                    <div class="tab-pane" id="certificates">
-                      Earn official recognition for your work, and share your success with friends, colleagues, and employers.
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>-->
-    </div>
+      <div class="container-fluid" id="all-courses-filter">
+            <div id="filter-panel" class=" filter-panel">
+                <div class="  panel panel-default ">
+                    <div class="panel-body">
+                        <form class="form-inline" role="form">
+                            <div class="form-group filter">
+                                <label class="filter-col" for="pref-filterby" style="margin-right:30px; font-size:14px">Filter by:</label>
+                                <select id="pref-filterby"  style="margin-right:50px; font-size:14px" class="form-control" >
+                                    <option>All</option>
+                                    <option>Web Development</option>
+                                    <option>Game Development</option>
+                                </select>
+                            </div> <!-- form group [order by] -->
 
+                            <div class="form-group filter">
+                                <label class="filter-col" style="margin-right:30px; font-size: 14px" for="pref-by-languages"  >Language:</label>
+                                <select id="pref-by-languages" style="margin-right:50px; font-size: 14px" class="form-control">
+                                    <option>All   </option>
+                                    <option>English   </option>
+                                    <option>Russian   </option>
+                                </select>
+                            </div> <!-- form group [order by] -->
+                            <div class=" filter ">
+                                <!--<label class="filter-col" style="margin-right:30px;" for="pref-search">Search:</label>-->
+                                <input type="text" class="form-control" id="pref-search" placeholder="Search.." style="padding-top: 2px;">
+                            </div><!-- form group [search] -->
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+      <div class="row">
+        {foreach from=$myArray item=course}
+<div class="col-md-6">
+      <div class="card">
+          <img class="card-img-top" src="{$course->getImg()}" alt="Card image cap">
+          <div class="card-header card-header-text card-header-primary">
+            <div class="card-text">
+              <h4 class="card-title">{$course->getTitle()}</h4>
+            </div>
+          </div>
+          <div class="card-body">
+              <p class="card-text">{$course->getDescription()}</p>
+    <a href="#" class="btn btn-primary btn-round">Go to course</a>
+          </div>
+      </div>
+</div>
+{/foreach}
     </div>
   </div>
-
   <footer class="footer">
     <div class="container">
       <nav class="float-left">

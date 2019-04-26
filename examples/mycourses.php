@@ -1,19 +1,18 @@
 <?php
 	require_once('../smarty/Smarty.class.php');
 	require_once('courseDAO.php');
-        session_start();
+	
 	$smarty = new Smarty();
     $smarty->template_dir = "../smarty/templates";
     $smarty->compile_dir = "../smarty/templates_c";
     
     $smarty->assign("lang","ua");
     $smarty->assign("title","Courses");
-    courseDAO::eagerInit();
-    $courses = courseDAO::getCourses();
+    courseDAO::myCourses();
+    $courses = courseDAO::getMyCourses();
     $content = "";
-    $header = "";
 
-    if($_SESSION["loggedin"] == true)
+ if($_SESSION["loggedin"] == true)
     {
 
           $header .= '<li class="dropdown nav-item">
@@ -32,8 +31,11 @@
       $header.=  '<li class="nav-item"> <a href="login-page.html" class="nav-link"> Log in </a> </li>';
     }
 
-    $smarty->assign("myArray",$courses);
+
     $smarty->assign("header",$header);
-    $smarty->display("courses.tpl");
+
+    $smarty->assign("myArray",$courses);
+
+    $smarty->display("mycourses-page.tpl");
 
 ?>

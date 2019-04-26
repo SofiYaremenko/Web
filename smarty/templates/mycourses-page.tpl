@@ -1,12 +1,12 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-    <meta lang="{$lang}" />
-    <meta charset="utf-8" />
+  <meta charset="utf-8" />
   <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title> {$title} </title>
-    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+  <title> My Courses </title>
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
   <!--     Fonts and icons     -->
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
@@ -14,6 +14,7 @@
   <link href="../assets/css/material-kit.css?v=2.0.5" rel="stylesheet" />
 
 </head>
+
 <body class="profile-page sidebar-collapse">
   <nav class="navbar navbar-color-on-scroll navbar-transparent fixed-top navbar-expand-lg" color-on-scroll="100">
     <div class="container">
@@ -38,59 +39,60 @@
                About Us
             </a>
           </li>
-          <li class="dropdown nav-item">
-            <a href="#profile" class="profile-photo dropdown-toggle nav-link" data-toggle="dropdown">
-              <div class="profile-photo-small">
-                {$avatarnavbar}
-              </div>
-            </a>
-            <div class="dropdown-menu dropdown-menu-right">
-              <a href="profile-page.php" class="dropdown-item">Me</a>
-              <a href="mycourses.php" class="dropdown-item">My Courses</a>
-              <a href="logout.php" class="dropdown-item">Sign out</a>
-            </div>
-          </li>
+          {$header}
         </ul>
       </div>
     </div>
   </nav>
-  <div class="page-header header-filter" data-parallax="true" style="background-image: url('../assets/img/city-profile.jpg');"></div>
-    <div class="main main-raised">
-    <div class="profile-content">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 ml-auto mr-auto">
-            <div class="profile">
-              <div class="avatar">
-
-
-              {$avatar}
-                <!-- <img src="../assets/img/basic-bear-avatar.png" alt="Circle Image" class="img-raised rounded-circle img-fluid"> -->
-              </div>
-              <div class="name">
-                {$name}
-                <!--<h3 class="title">Christian Louboutin</h3> -->
-                {$email}
-                <!--<p>christian.louboutin@gmail.com</p> -->
-              </div>
-            </div>
-          </div>
+  <div class="page-header header-filter" data-parallax="true" style="background-image: url('../assets/img/city-profile.jpg');">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 ml-auto mr-auto text-center">
+          <h2 class="title">My Courses</h2>
         </div>
-        <div class="description text-center">
-          {$desc}
-          <!--<p>An artist of considerable range, Chet Faker &#x2014; the name taken by Melbourne-raised, Brooklyn-based Nick Murphy &#x2014; writes, performs and records all of his own music, giving it a warm, intimate feel with a solid groove structure. </p> -->
-          <br>
-          <div class="row">
-            <div class="col-md-8 ml-auto mr-auto">
-              <a href="mycourses-page.html" class="btn btn-primary btn-lg" role="button">My courses</a>
-            </div>
-          </div>
-        </div>
-        
-          <br>
       </div>
     </div>
   </div>
+  <div class="main main-raised">
+      <div class="container">
+        <div class="section">
+        <div class="row">
+        
+		{foreach from=$myArray item=course}
+        <div class="card">
+          
+          <div class="card-header card-header-text card-header-primary">
+            <div class="card-text">
+              <h4 class="card-title">{$course->getTitle()}</h4>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="row">
+            <div class="col-4">
+            <img src="{$course->getImg()}" alt="Card image cap" width="100%">
+          </div>
+          <div class="col-8">
+             <div class="row">
+            <p class="card-text"  >{$course->getDescription()}</p>
+            </div>
+           
+            <div class="row mycourse " >
+                <a href="coursedetails-page.html" class="btn btn-primary">Course Details</a>
+                <a href="courseforum-page.html" class="btn btn-primary">Forum</a>
+            </div>
+          </div>
+
+              </div>
+
+          </div>
+
+        </div>
+		{/foreach}
+        
+        </div>
+      </div>
+  </div>
+</div>
   <footer class="footer">
     <div class="container">
       <nav class="float-left">
@@ -103,13 +105,12 @@
       </div>
     </div>
   </footer>
-
-    <!--   Core JS Files   -->
+  <!--   Core JS Files   -->
   <script src="../assets/js/core/jquery.min.js" type="text/javascript"></script>
   <script src="../assets/js/core/popper.min.js" type="text/javascript"></script>
   <script src="../assets/js/core/bootstrap-material-design.min.js" type="text/javascript"></script>
   <script src="../assets/js/plugins/moment.min.js"></script>
-  <!--  Plugin for the Datepicker, full documentation here: https://github.com/Eonasdan/bootstrap-datetimepicker -->
+  <!--	Plugin for the Datepicker, full documentation here: https://github.com/Eonasdan/bootstrap-datetimepicker -->
   <script src="../assets/js/plugins/bootstrap-datetimepicker.js" type="text/javascript"></script>
   <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
   <script src="../assets/js/plugins/nouislider.min.js" type="text/javascript"></script>
@@ -118,4 +119,5 @@
   <!-- Control Center for Material Kit: parallax effects, scripts for the example pages etc -->
   <script src="../assets/js/material-kit.js?v=2.0.5" type="text/javascript"></script>
 </body>
+
 </html>

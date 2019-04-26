@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-04-26 10:45:13
-  from 'C:\wamp64\www\Web\smarty\templates\user.tpl' */
+/* Smarty version 3.1.33, created on 2019-04-26 11:11:12
+  from 'C:\wamp64\www\Web\smarty\templates\mycourses-page.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5cc2e139966996_22697395',
+  'unifunc' => 'content_5cc2e7503c3db4_92619191',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    'f4de219c72ba486714c005596b9077cd716f81f2' => 
+    '6e117e942a6494a71477e2ec6ae8f4d48543dcb6' => 
     array (
-      0 => 'C:\\wamp64\\www\\Web\\smarty\\templates\\user.tpl',
-      1 => 1556275504,
+      0 => 'C:\\wamp64\\www\\Web\\smarty\\templates\\mycourses-page.tpl',
+      1 => 1556277067,
       2 => 'file',
     ),
   ),
@@ -20,18 +20,16 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5cc2e139966996_22697395 (Smarty_Internal_Template $_smarty_tpl) {
-?><!doctype html>
-<html>
+function content_5cc2e7503c3db4_92619191 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
+<html lang="en">
+
 <head>
-    <meta lang="<?php echo $_smarty_tpl->tpl_vars['lang']->value;?>
-" />
-    <meta charset="utf-8" />
+  <meta charset="utf-8" />
   <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title> <?php echo $_smarty_tpl->tpl_vars['title']->value;?>
- </title>
-    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+  <title> My Courses </title>
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
   <!--     Fonts and icons     -->
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
@@ -39,6 +37,7 @@ function content_5cc2e139966996_22697395 (Smarty_Internal_Template $_smarty_tpl)
   <link href="../assets/css/material-kit.css?v=2.0.5" rel="stylesheet" />
 
 </head>
+
 <body class="profile-page sidebar-collapse">
   <nav class="navbar navbar-color-on-scroll navbar-transparent fixed-top navbar-expand-lg" color-on-scroll="100">
     <div class="container">
@@ -63,64 +62,71 @@ function content_5cc2e139966996_22697395 (Smarty_Internal_Template $_smarty_tpl)
                About Us
             </a>
           </li>
-          <li class="dropdown nav-item">
-            <a href="#profile" class="profile-photo dropdown-toggle nav-link" data-toggle="dropdown">
-              <div class="profile-photo-small">
-                <?php echo $_smarty_tpl->tpl_vars['avatarnavbar']->value;?>
+          <?php echo $_smarty_tpl->tpl_vars['header']->value;?>
 
-              </div>
-            </a>
-            <div class="dropdown-menu dropdown-menu-right">
-              <a href="profile-page.php" class="dropdown-item">Me</a>
-              <a href="mycourses.php" class="dropdown-item">My Courses</a>
-              <a href="logout.php" class="dropdown-item">Sign out</a>
-            </div>
-          </li>
         </ul>
       </div>
     </div>
   </nav>
-  <div class="page-header header-filter" data-parallax="true" style="background-image: url('../assets/img/city-profile.jpg');"></div>
-    <div class="main main-raised">
-    <div class="profile-content">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 ml-auto mr-auto">
-            <div class="profile">
-              <div class="avatar">
-
-
-              <?php echo $_smarty_tpl->tpl_vars['avatar']->value;?>
-
-                <!-- <img src="../assets/img/basic-bear-avatar.png" alt="Circle Image" class="img-raised rounded-circle img-fluid"> -->
-              </div>
-              <div class="name">
-                <?php echo $_smarty_tpl->tpl_vars['name']->value;?>
-
-                <!--<h3 class="title">Christian Louboutin</h3> -->
-                <?php echo $_smarty_tpl->tpl_vars['email']->value;?>
-
-                <!--<p>christian.louboutin@gmail.com</p> -->
-              </div>
-            </div>
-          </div>
+  <div class="page-header header-filter" data-parallax="true" style="background-image: url('../assets/img/city-profile.jpg');">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 ml-auto mr-auto text-center">
+          <h2 class="title">My Courses</h2>
         </div>
-        <div class="description text-center">
-          <?php echo $_smarty_tpl->tpl_vars['desc']->value;?>
-
-          <!--<p>An artist of considerable range, Chet Faker &#x2014; the name taken by Melbourne-raised, Brooklyn-based Nick Murphy &#x2014; writes, performs and records all of his own music, giving it a warm, intimate feel with a solid groove structure. </p> -->
-          <br>
-          <div class="row">
-            <div class="col-md-8 ml-auto mr-auto">
-              <a href="mycourses-page.html" class="btn btn-primary btn-lg" role="button">My courses</a>
-            </div>
-          </div>
-        </div>
-        
-          <br>
       </div>
     </div>
   </div>
+  <div class="main main-raised">
+      <div class="container">
+        <div class="section">
+        <div class="row">
+        
+		<?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['myArray']->value, 'course');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['course']->value) {
+?>
+        <div class="card">
+          
+          <div class="card-header card-header-text card-header-primary">
+            <div class="card-text">
+              <h4 class="card-title"><?php echo $_smarty_tpl->tpl_vars['course']->value->getTitle();?>
+</h4>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="row">
+            <div class="col-4">
+            <img src="<?php echo $_smarty_tpl->tpl_vars['course']->value->getImg();?>
+" alt="Card image cap" width="100%">
+          </div>
+          <div class="col-8">
+             <div class="row">
+            <p class="card-text"  ><?php echo $_smarty_tpl->tpl_vars['course']->value->getDescription();?>
+</p>
+            </div>
+           
+            <div class="row mycourse " >
+                <a href="coursedetails-page.html" class="btn btn-primary">Course Details</a>
+                <a href="courseforum-page.html" class="btn btn-primary">Forum</a>
+            </div>
+          </div>
+
+              </div>
+
+          </div>
+
+        </div>
+		<?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+        
+        </div>
+      </div>
+  </div>
+</div>
   <footer class="footer">
     <div class="container">
       <nav class="float-left">
@@ -135,8 +141,7 @@ function content_5cc2e139966996_22697395 (Smarty_Internal_Template $_smarty_tpl)
       </div>
     </div>
   </footer>
-
-    <!--   Core JS Files   -->
+  <!--   Core JS Files   -->
   <?php echo '<script'; ?>
  src="../assets/js/core/jquery.min.js" type="text/javascript"><?php echo '</script'; ?>
 >
@@ -149,7 +154,7 @@ function content_5cc2e139966996_22697395 (Smarty_Internal_Template $_smarty_tpl)
   <?php echo '<script'; ?>
  src="../assets/js/plugins/moment.min.js"><?php echo '</script'; ?>
 >
-  <!--  Plugin for the Datepicker, full documentation here: https://github.com/Eonasdan/bootstrap-datetimepicker -->
+  <!--	Plugin for the Datepicker, full documentation here: https://github.com/Eonasdan/bootstrap-datetimepicker -->
   <?php echo '<script'; ?>
  src="../assets/js/plugins/bootstrap-datetimepicker.js" type="text/javascript"><?php echo '</script'; ?>
 >
@@ -166,5 +171,6 @@ function content_5cc2e139966996_22697395 (Smarty_Internal_Template $_smarty_tpl)
  src="../assets/js/material-kit.js?v=2.0.5" type="text/javascript"><?php echo '</script'; ?>
 >
 </body>
+
 </html><?php }
 }

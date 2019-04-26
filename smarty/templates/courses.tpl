@@ -55,28 +55,24 @@
             <div id="filter-panel" class=" filter-panel">
                 <div class="  panel panel-default ">
                     <div class="panel-body">
-                        <form class="form-inline" role="form">
+                        <form class="form-inline" role="form" method="post" action="courses.php">
                             <div class="form-group filter">
                                 <label class="filter-col" for="pref-filterby" style="margin-right:30px; font-size:14px">Filter by:</label>
-                                <select id="pref-filterby"  style="margin-right:50px; font-size:14px" class="form-control" >
-                                    <option>All</option>
-                                    <option>Web Development</option>
-                                    <option>Game Development</option>
+                                <select name="select"  id="pref-filterby"  style="margin-right:50px; font-size:14px" class="form-control" >
+                                    <option value="all" >All</option>
+
+                                    <option value="databases" >Databases</option>>
+                                    <option value="web development" >Web Development</option>
+                                    <option value="programming languages" >Programming Languages</option>
+                                    <option value="game development" >Game Development</option>
+                                    <option value="mobile apps" >Mobile Apps</option>
+                                    {*<option value="software engineering" selected="selected">Software Engineering</option>*}
+                                    <option value="software engineering" >Software Engineering</option>
                                 </select>
+                                <input  class="btn" type="submit" name="submit" value="filter">
                             </div> <!-- form group [order by] -->
 
-                            <div class="form-group filter">
-                                <label class="filter-col" style="margin-right:30px; font-size: 14px" for="pref-by-languages"  >Language:</label>
-                                <select id="pref-by-languages" style="margin-right:50px; font-size: 14px" class="form-control">
-                                    <option>All   </option>
-                                    <option>English   </option>
-                                    <option>Russian   </option>
-                                </select>
-                            </div> <!-- form group [order by] -->
-                            <div class=" filter ">
-                                <!--<label class="filter-col" style="margin-right:30px;" for="pref-search">Search:</label>-->
-                                <input type="text" class="form-control" id="pref-search" placeholder="Search.." style="padding-top: 2px;">
-                            </div><!-- form group [search] -->
+                          
                         </form>
                     </div>
                 </div>

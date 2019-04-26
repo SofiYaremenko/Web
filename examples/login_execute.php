@@ -16,6 +16,7 @@ $query = "SELECT * FROM users WHERE email='$email'";
 $result = mysqli_query($db, $query);
 $user;
 if(mysqli_num_rows($result) == 0){
+          header("location: login-page.html");
           die("This username could not be found! ");
       }
       while ($row = mysqli_fetch_array($result)){

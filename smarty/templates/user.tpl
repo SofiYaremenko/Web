@@ -82,7 +82,7 @@
           <br>
           <div class="row">
             <div class="col-md-8 ml-auto mr-auto">
-              <a href="mycourses-page.html" class="btn btn-primary btn-lg" role="button">My courses</a>
+              <a href="mycourses.php" class="btn btn-primary btn-lg" role="button">My courses</a>
             </div>
           </div>
         </div>

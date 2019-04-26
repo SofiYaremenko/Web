@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-04-26 12:16:29
-  from 'C:\wamp64\www\Web\smarty\templates\mycourses-page.tpl' */
+/* Smarty version 3.1.33, created on 2019-04-26 12:14:42
+  from 'C:\wamp64\www\Web\smarty\templates\coursedetails-page.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5cc2f69d395a40_69946842',
+  'unifunc' => 'content_5cc2f632a8d165_32532951',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '6e117e942a6494a71477e2ec6ae8f4d48543dcb6' => 
+    '0de68f940a67b4f031aa59d01d5bba8308ccc6f7' => 
     array (
-      0 => 'C:\\wamp64\\www\\Web\\smarty\\templates\\mycourses-page.tpl',
-      1 => 1556280878,
+      0 => 'C:\\wamp64\\www\\Web\\smarty\\templates\\coursedetails-page.tpl',
+      1 => 1556280834,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5cc2f69d395a40_69946842 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5cc2f632a8d165_32532951 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -28,7 +28,7 @@ function content_5cc2f69d395a40_69946842 (Smarty_Internal_Template $_smarty_tpl)
   <meta charset="utf-8" />
   <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <title> My Courses </title>
+  <title> Course </title>
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
   <!--     Fonts and icons     -->
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
@@ -38,11 +38,11 @@ function content_5cc2f69d395a40_69946842 (Smarty_Internal_Template $_smarty_tpl)
 
 </head>
 
-<body class="profile-page sidebar-collapse">
+<body class="product-page sidebar-collapse">
   <nav class="navbar navbar-color-on-scroll navbar-transparent fixed-top navbar-expand-lg" color-on-scroll="100">
     <div class="container">
       <div class="navbar-translate">
-        <a class="navbar-brand" href="template.html"> Courses 4 You </a>
+        <a class="navbar-brand" href="../template.html"> Courses 4 You </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="sr-only">Toggle navigation</span>
           <span class="navbar-toggler-icon"></span>
@@ -53,17 +53,27 @@ function content_5cc2f69d395a40_69946842 (Smarty_Internal_Template $_smarty_tpl)
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="courses.php">
+            <a class="nav-link" href="../courses.php">
                <i class="material-icons">apps</i>Courses
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="about.html">
+            <a class="nav-link" href="../about.html">
                About Us
             </a>
           </li>
-          <?php echo $_smarty_tpl->tpl_vars['header']->value;?>
-
+          <li class="dropdown nav-item">
+            <a href="#profile" class="profile-photo dropdown-toggle nav-link" data-toggle="dropdown">
+              <div class="profile-photo-small">
+                <img src="../assets/img/faces/christian.jpg" alt="Circle Image" class="rounded-circle img-fluid">
+              </div>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right">
+              <a href="profile-page.php" class="dropdown-item">Me</a>
+              <a href="mycourses-page.html" class="dropdown-item">My Courses</a>
+              <a href="../logout.php" class="dropdown-item">Sign out</a>
+            </div>
+          </li>
         </ul>
       </div>
     </div>
@@ -77,60 +87,54 @@ function content_5cc2f69d395a40_69946842 (Smarty_Internal_Template $_smarty_tpl)
       </div>
     </div>
   </div>
-  <div class="main main-raised">
-      <div class="container">
-        <div class="section">
+  <div class="section">
+    <div class="container">
+      <div class="main main-raised main-product">
         <div class="row">
-        
-		<?php
-$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['myArray']->value, 'course');
-if ($_from !== null) {
-foreach ($_from as $_smarty_tpl->tpl_vars['course']->value) {
-?>
-    <form method="post" action="coursedetails.php">
-        <div class="card">
-          
-          <div class="card-header card-header-text card-header-primary">
-            <div class="card-text">
-              <h4 class="card-title"><?php echo $_smarty_tpl->tpl_vars['course']->value->getTitle();?>
-</h4>
-               <input name="id" type="hidden" value="<?php echo $_smarty_tpl->tpl_vars['course']->value->getId();?>
-">
-            </div>
-          </div>
-          <div class="card-body">
-            <div class="row">
-            <div class="col-4">
+          <div class="col-4">
             <img src='<?php echo $_smarty_tpl->tpl_vars['course']->value->getImg();?>
 ' alt="Card image cap" width="100%">
+            
           </div>
           <div class="col-8">
-             <div class="row">
-            <p class="card-text"  ><?php echo $_smarty_tpl->tpl_vars['course']->value->getDescription();?>
-</p>
+            <h2 class="title"><?php echo $_smarty_tpl->tpl_vars['course']->value->getTitle();?>
+</h2>
+            <h3 class="main-price"><?php echo $_smarty_tpl->tpl_vars['course']->value->getHoursAmount();?>
+</h3>
+            <div class="row">
+              <p class="card-body"  ><?php echo $_smarty_tpl->tpl_vars['course']->value->getDescription();?>
+
+              </p>
             </div>
-           
-            <div class="row mycourse " >
-                 <button type="submit" class="btn btn-primary">Course Details</a>
+            
+            <div class="row pull-right">
+
                 <a href="forum.php" class="btn btn-primary">Forum</a>
+               <a href="coursedetails-page.html" class="btn btn-primary">Add to my courses</a>
             </div>
           </div>
-
-              </div>
-
-          </div>
-
-        </div>
-        </form>
-		<?php
-}
-}
-$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
-        
         </div>
       </div>
+      <div class="features text-center">
+        <div class="row">
+          <h3 class="title">Intro</h3>
+        </div>
+        <div class=" text-left">
+          <p><a href="lesson-page.html" >Lesson 1</a></p>
+          <p><a href="#" >Lesson 2</a></p>
+        </div>
+         <div class="row">
+          <h3 class="title">Part 1</h3>
+        </div>
+        <div class=" text-left">
+          <p><a href="#" >Lesson 1</a></p>
+         <p> <a href="#" >Lesson 2</a></p>
+          <p><a href="#" >Lesson 3</a></p>
+        </div>
+      </div>
+      
+    </div>
   </div>
-</div>
   <footer class="footer">
     <div class="container">
       <nav class="float-left">

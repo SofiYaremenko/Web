@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <title> My Courses </title>
+  <title> Course </title>
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
   <!--     Fonts and icons     -->
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
@@ -15,11 +15,11 @@
 
 </head>
 
-<body class="profile-page sidebar-collapse">
+<body class="product-page sidebar-collapse">
   <nav class="navbar navbar-color-on-scroll navbar-transparent fixed-top navbar-expand-lg" color-on-scroll="100">
     <div class="container">
       <div class="navbar-translate">
-        <a class="navbar-brand" href="template.html"> Courses 4 You </a>
+        <a class="navbar-brand" href="../template.html"> Courses 4 You </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="sr-only">Toggle navigation</span>
           <span class="navbar-toggler-icon"></span>
@@ -30,16 +30,27 @@
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="courses.php">
+            <a class="nav-link" href="../courses.php">
                <i class="material-icons">apps</i>Courses
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="about.html">
+            <a class="nav-link" href="../about.html">
                About Us
             </a>
           </li>
-          {$header}
+          <li class="dropdown nav-item">
+            <a href="#profile" class="profile-photo dropdown-toggle nav-link" data-toggle="dropdown">
+              <div class="profile-photo-small">
+                <img src="../assets/img/faces/christian.jpg" alt="Circle Image" class="rounded-circle img-fluid">
+              </div>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right">
+              <a href="profile-page.php" class="dropdown-item">Me</a>
+              <a href="mycourses-page.html" class="dropdown-item">My Courses</a>
+              <a href="../logout.php" class="dropdown-item">Sign out</a>
+            </div>
+          </li>
         </ul>
       </div>
     </div>
@@ -53,49 +64,50 @@
       </div>
     </div>
   </div>
-  <div class="main main-raised">
-      <div class="container">
-        <div class="section">
+  <div class="section">
+    <div class="container">
+      <div class="main main-raised main-product">
         <div class="row">
-        
-		{foreach from=$myArray item=course}
-    <form method="post" action="coursedetails.php">
-        <div class="card">
-          
-          <div class="card-header card-header-text card-header-primary">
-            <div class="card-text">
-              <h4 class="card-title">{$course->getTitle()}</h4>
-               <input name="id" type="hidden" value="{$course->getId()}">
-            </div>
-          </div>
-          <div class="card-body">
-            <div class="row">
-            <div class="col-4">
+          <div class="col-4">
             <img src='{$course->getImg()}' alt="Card image cap" width="100%">
+            
           </div>
           <div class="col-8">
-             <div class="row">
-            <p class="card-text"  >{$course->getDescription()}</p>
+            <h2 class="title">{$course->getTitle()}</h2>
+            <h3 class="main-price">{$course->getHoursAmount()}</h3>
+            <div class="row">
+              <p class="card-body"  >{$course->getDescription()}
+              </p>
             </div>
-           
-            <div class="row mycourse " >
-                 <button type="submit" class="btn btn-primary">Course Details</a>
+            
+            <div class="row pull-right">
+
                 <a href="forum.php" class="btn btn-primary">Forum</a>
+               <a href="coursedetails-page.html" class="btn btn-primary">Add to my courses</a>
             </div>
           </div>
-
-              </div>
-
-          </div>
-
-        </div>
-        </form>
-		{/foreach}
-        
         </div>
       </div>
+      <div class="features text-center">
+        <div class="row">
+          <h3 class="title">Intro</h3>
+        </div>
+        <div class=" text-left">
+          <p><a href="lesson-page.html" >Lesson 1</a></p>
+          <p><a href="#" >Lesson 2</a></p>
+        </div>
+         <div class="row">
+          <h3 class="title">Part 1</h3>
+        </div>
+        <div class=" text-left">
+          <p><a href="#" >Lesson 1</a></p>
+         <p> <a href="#" >Lesson 2</a></p>
+          <p><a href="#" >Lesson 3</a></p>
+        </div>
+      </div>
+      
+    </div>
   </div>
-</div>
   <footer class="footer">
     <div class="container">
       <nav class="float-left">

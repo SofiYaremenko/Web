@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-04-26 00:01:18
+/* Smarty version 3.1.33, created on 2019-04-26 07:37:09
   from 'C:\wamp64\www\Web\smarty\templates\user.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5cc24a4e288340_79214573',
+  'unifunc' => 'content_5cc2b5254da2b8_54263451',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f4de219c72ba486714c005596b9077cd716f81f2' => 
     array (
       0 => 'C:\\wamp64\\www\\Web\\smarty\\templates\\user.tpl',
-      1 => 1556236869,
+      1 => 1556264189,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5cc24a4e288340_79214573 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5cc2b5254da2b8_54263451 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!doctype html>
 <html>
 <head>
@@ -53,18 +53,10 @@ function content_5cc24a4e288340_79214573 (Smarty_Internal_Template $_smarty_tpl)
       </div>
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav ml-auto">
-          <li class="dropdown nav-item">
-            <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-              <i class="material-icons">apps</i>Courses
+          <li class="nav-item">
+            <a class="nav-link" href="../courses.php">
+               <i class="material-icons">apps</i>Courses
             </a>
-            <div class="dropdown-menu dropdown-with-icons">
-              <a href="../courses.html" class="dropdown-item">
-                <i class="material-icons">assignment_turned_in</i> Available courses
-              </a>
-              <a href="../courses_future.html" class="dropdown-item">
-                <i class="material-icons">assignment_late</i> Future courses
-              </a>
-            </div>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="../about.html">
@@ -74,7 +66,8 @@ function content_5cc24a4e288340_79214573 (Smarty_Internal_Template $_smarty_tpl)
           <li class="dropdown nav-item">
             <a href="#profile" class="profile-photo dropdown-toggle nav-link" data-toggle="dropdown">
               <div class="profile-photo-small">
-                <img src="../assets/img/basic-bear-avatar.png" alt="Circle Image" class="rounded-circle img-fluid">
+                <?php echo $_smarty_tpl->tpl_vars['avatarnavbar']->value;?>
+
               </div>
             </a>
             <div class="dropdown-menu dropdown-menu-right">
@@ -95,6 +88,7 @@ function content_5cc24a4e288340_79214573 (Smarty_Internal_Template $_smarty_tpl)
           <div class="col-md-6 ml-auto mr-auto">
             <div class="profile">
               <div class="avatar">
+
 
               <?php echo $_smarty_tpl->tpl_vars['avatar']->value;?>
 

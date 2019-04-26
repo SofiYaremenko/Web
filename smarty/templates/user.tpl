@@ -41,7 +41,7 @@
           <li class="dropdown nav-item">
             <a href="#profile" class="profile-photo dropdown-toggle nav-link" data-toggle="dropdown">
               <div class="profile-photo-small">
-                <img src="../assets/img/basic-bear-avatar.png" alt="Circle Image" class="rounded-circle img-fluid">
+                {$avatarnavbar}
               </div>
             </a>
             <div class="dropdown-menu dropdown-menu-right">
@@ -62,6 +62,7 @@
           <div class="col-md-6 ml-auto mr-auto">
             <div class="profile">
               <div class="avatar">
+
 
               {$avatar}
                 <!-- <img src="../assets/img/basic-bear-avatar.png" alt="Circle Image" class="img-raised rounded-circle img-fluid"> -->

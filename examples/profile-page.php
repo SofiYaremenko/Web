@@ -13,8 +13,9 @@
     $user = profileDAO::getlogUser();
     $desc = "";
     $avatar = "";
-    $name = "Sofi";
+    $name = "";
     $email = "";
+    $avatarnavbar = "";
     $ses_email = $_SESSION['email'];
 
     
@@ -23,10 +24,12 @@
         //<p>christian.louboutin@gmail.com</p>
         $email .="<p>". $user->getEmail()."</p>";
         //<h3 class="title">Christian Louboutin</h3> 
-        $name .='<h3 class="title">'.$user->getFirstName(). '</h3>';
-        //echo $name;
+        $name .='<h3 class="title">'.$user->getFirstName().' '. $user->getLastName(). '</h3>';
+
         //<img src="../assets/img/basic-bear-avatar.png" alt="Circle Image" class="img-raised rounded-circle img-fluid"> 
         $avatar .= '<img src=' . $user->getImg(). 'alt="Circle Image" class="img-raised rounded-circle img-fluid">';
+        //<img src="../assets/img/basic-bear-avatar.png" alt="Circle Image" class="rounded-circle img-fluid">
+        $avatarnavbar .= '<img src='. $user->getImg(). 'alt="Circle Image" class="rounded-circle img-fluid">';
         $desc .="<p>". $user->getAboutUser()."</p>";
     } 
 
@@ -34,5 +37,7 @@
     $smarty->assign("email",$email);
     $smarty->assign("name",$name);
     $smarty->assign("avatar",$avatar);
+    $smarty->assign("avatarnavbar",$avatarnavbar);
     $smarty->assign("desc",$desc);
     $smarty->display("../smarty/templates/user.tpl");
+    ?>

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-04-26 12:55:01
+/* Smarty version 3.1.33, created on 2019-04-26 13:20:55
   from 'C:\wamp64\www\Web\smarty\templates\forum.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5cc2ffa5cda2f8_15510006',
+  'unifunc' => 'content_5cc305b70911a9_15532131',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '7db2144ef0825df05e8296d66ecca26392b1ec35' => 
     array (
       0 => 'C:\\wamp64\\www\\Web\\smarty\\templates\\forum.tpl',
-      1 => 1556283011,
+      1 => 1556284848,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5cc2ffa5cda2f8_15510006 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5cc305b70911a9_15532131 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!doctype html>
 <html lang="en">
 
@@ -63,11 +63,8 @@ function content_5cc2ffa5cda2f8_15510006 (Smarty_Internal_Template $_smarty_tpl)
                         About Us
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a href="examples/login-page.html" class="nav-link">
-                        Log in
-                    </a>
-                </li>
+               <?php echo $_smarty_tpl->tpl_vars['header']->value;?>
+
             </ul>
         </div>
     </div>
@@ -106,7 +103,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['comment']->value) {
                         </div><!-- /panel-body -->
                     </div><!-- /panel panel-default -->
                 </div><!-- /col-sm-5 -->
-             </div0
+             </div>
                  </div>
              </div>
             <?php
@@ -122,13 +119,12 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
             <form name="form1" method="post" action="add_comment.php">
                 <td>
                     <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#FFFFFF">
-                        <input name="id" type="hidden" value="<?php echo $_smarty_tpl->tpl_vars['course']->value->getId();?>
-">   
+                       
                         <tr>
                             <td valign="top"><strong>New Comment</strong></td>
                             <td valign="top">:</td>
                             <td><textarea name="a_answer" cols="45" rows="3" id="a_answer"></textarea>
-                                <input type="submit" name="Submit" value="Submit"
+                                <input type="submit" name="Submit" value="Submit">
                             </td>
                         </tr>
                     </table>

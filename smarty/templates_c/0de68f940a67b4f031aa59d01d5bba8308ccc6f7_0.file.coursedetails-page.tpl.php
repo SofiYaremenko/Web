@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-04-26 12:14:42
+/* Smarty version 3.1.33, created on 2019-04-26 13:25:36
   from 'C:\wamp64\www\Web\smarty\templates\coursedetails-page.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5cc2f632a8d165_32532951',
+  'unifunc' => 'content_5cc306d0b40749_78536011',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0de68f940a67b4f031aa59d01d5bba8308ccc6f7' => 
     array (
       0 => 'C:\\wamp64\\www\\Web\\smarty\\templates\\coursedetails-page.tpl',
-      1 => 1556280834,
+      1 => 1556285116,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5cc2f632a8d165_32532951 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5cc306d0b40749_78536011 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -109,8 +109,13 @@ function content_5cc2f632a8d165_32532951 (Smarty_Internal_Template $_smarty_tpl)
             
             <div class="row pull-right">
 
+               <form method="post" action="enroll.php">
+      <input name="id" type="hidden" value="<?php echo $_smarty_tpl->tpl_vars['course']->value->getId();?>
+" >
+
                 <a href="forum.php" class="btn btn-primary">Forum</a>
-               <a href="coursedetails-page.html" class="btn btn-primary">Add to my courses</a>
+               <button type="submit" class="btn btn-primary">Add to my courses</a>
+         </form>
             </div>
           </div>
         </div>

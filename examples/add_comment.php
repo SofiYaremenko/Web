@@ -15,19 +15,20 @@ if($link === false){
 
 // Get value of id that sent from hidden field
 
-$id=$_POST['id'];
+//$id=$_POST['id'];
+
 // get values that sent from form
 $a_email=$_SESSION["email"];
 $sql = "SELECT UC.id FROM u_c_comments UC WHERE UC.fk_user = '$a_email' AND UC.fk_course = '$id'";
 
-echo $id . " -  " . $a_email;
+//echo $id . " -  " . $a_email;
 
-$result = mysqli_query($link,$sql);
-while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
-  $a_uc = $row["id"];
-}
-mysqli_free_result($result);
-
+//$result = mysqli_query($link,$sql);
+//while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+//  $a_uc = $row["id"];
+//}
+//mysqli_free_result($result);
+$a_uc = "1";
 
 $a_answer=$_POST['a_answer'];
 

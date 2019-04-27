@@ -82,8 +82,12 @@
             
             <div class="row pull-right">
 
+               <form method="post" action="enroll.php">
+      <input name="id" type="hidden" value="{$course->getId()}" >
+
                 <a href="forum.php" class="btn btn-primary">Forum</a>
-               <a href="coursedetails-page.html" class="btn btn-primary">Add to my courses</a>
+               <button type="submit" class="btn btn-primary">Add to my courses</a>
+         </form>
             </div>
           </div>
         </div>

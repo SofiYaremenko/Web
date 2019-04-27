@@ -15,7 +15,7 @@ class forumDAO
         $pdo = new DBHelper();
         $pdo->connect();
 
-        $sqlQuery = "SELECT C.id,C.comment,C.datetime,UC.fk_user, UC.fk_course FROM `comments` C INNER JOIN `u_c_comments` UC ON C.fk_u_c = UC.id INNER JOIN `users` U ON UC.fk_user = U.email WHERE UC.fk_course = 3";
+        $sqlQuery = "SELECT C.id,C.comment,C.datetime,UC.fk_user, UC.fk_course FROM `comments` C INNER JOIN `u_c_comments` UC ON C.fk_u_c = UC.id INNER JOIN `users` U ON UC.fk_user = U.email WHERE UC.fk_course = 1";
 
         foreach($pdo->query($sqlQuery) as $row)
         {

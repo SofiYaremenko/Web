@@ -41,11 +41,7 @@
                         About Us
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a href="examples/login-page.html" class="nav-link">
-                        Log in
-                    </a>
-                </li>
+               {$header}
             </ul>
         </div>
     </div>
@@ -77,7 +73,7 @@
                         </div><!-- /panel-body -->
                     </div><!-- /panel panel-default -->
                 </div><!-- /col-sm-5 -->
-             </div0
+             </div>
                  </div>
              </div>
             {/foreach}
@@ -90,12 +86,12 @@
             <form name="form1" method="post" action="add_comment.php">
                 <td>
                     <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#FFFFFF">
-                        <input name="id" type="hidden" value="{$course->getId()}">   
+                       
                         <tr>
                             <td valign="top"><strong>New Comment</strong></td>
                             <td valign="top">:</td>
                             <td><textarea name="a_answer" cols="45" rows="3" id="a_answer"></textarea>
-                                <input type="submit" name="Submit" value="Submit"
+                                <input type="submit" name="Submit" value="Submit">
                             </td>
                         </tr>
                     </table>
